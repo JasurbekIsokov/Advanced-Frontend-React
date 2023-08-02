@@ -2,6 +2,7 @@ import path from "path";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import webpack from "webpack";
 import { buildPlugins } from "./config/build/buildPlugins";
+import { buildLoaders } from "./config/build/buildLoaders";
 
 const config: webpack.Configuration = {
   mode: "production",
@@ -15,14 +16,9 @@ const config: webpack.Configuration = {
 
   plugins: buildPlugins(),
   module: {
-    rules: [
-      {
-        test: /\.tsx?$/,
-        use: "ts-loader",
-        exclude: /node_modules/,
-      },
-    ],
+    rules: buildLoaders(),
   },
+
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
   },
