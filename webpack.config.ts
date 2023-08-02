@@ -3,6 +3,7 @@ import HtmlWebpackPlugin from "html-webpack-plugin";
 import webpack from "webpack";
 import { buildPlugins } from "./config/build/buildPlugins";
 import { buildLoaders } from "./config/build/buildLoaders";
+import { buildResolvers } from "./config/build/buildResolvers";
 
 const config: webpack.Configuration = {
   mode: "production",
@@ -19,9 +20,7 @@ const config: webpack.Configuration = {
     rules: buildLoaders(),
   },
 
-  resolve: {
-    extensions: [".tsx", ".ts", ".js"],
-  },
+  resolve: buildResolvers(),
 };
 
 export default config;
