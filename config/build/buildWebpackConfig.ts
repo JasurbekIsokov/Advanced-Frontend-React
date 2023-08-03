@@ -1,12 +1,13 @@
-import webapk from "webpack";
+import webpack from "webpack";
 import { BuildOptions } from "./types/config";
 import { buildPlugins } from "./buildPlugins";
 import { buildLoaders } from "./buildLoaders";
 import { buildResolvers } from "./buildResolvers";
+import { builDevServer } from "./buildDevServer";
 
 export function buildWebpackConfig(
   options: BuildOptions
-): webapk.Configuration {
+): webpack.Configuration {
   const { paths, mode } = options;
 
   return {
@@ -24,5 +25,7 @@ export function buildWebpackConfig(
     },
 
     resolve: buildResolvers(),
+    devtool: "inline-source-map",
+    devServer: builDevServer(options),
   };
 }
