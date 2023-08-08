@@ -1,4 +1,5 @@
 import webpack from "webpack";
+
 import { BuildOptions } from "./types/config";
 import { buildPlugins } from "./buildPlugins";
 import { buildLoaders } from "./buildLoaders";
@@ -28,4 +29,6 @@ export function buildWebpackConfig(
     devtool: isDev ? "inline-source-map" : undefined,
     devServer: isDev ? builDevServer(options) : undefined,
   };
+
+  
 }

@@ -1,30 +1,32 @@
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import Home from "./pages/Home/Home";
-import About from "./pages/About/About";
-import ContacUs from "./pages/ContactUs/ContactUs";
-import Counter from "./components/Counter";
+import { Routes, Route, Link } from "react-router-dom";
+
 import { AboutAsync } from "./pages/About/AboutAcync";
 import { ContactUsAsync } from "./pages/ContactUs/ContactUsAsync";
 import { Suspense } from "react";
 import { HomeAsync } from "./pages/Home/HomeAsync";
+import { useTheme } from "./Theme/useTheme";
+import { classNames } from "./helpers/classNames/ClassNames";
 
 const App = () => {
+  const { theme, toggleTheme } = useTheme();
+
   return (
-    <BrowserRouter>
+    <div className={classNames("app", {}, [theme])}>
+      <button onClick={toggleTheme}>Toogle</button>
       <div>
         <Link to="/">HOME</Link>|-------------|
         <Link to="/about">ABOUT</Link>|-------------|
         <Link to="/contact">CONTACT</Link>|-------------|
       </div>
 
-      <Suspense fallback={<h1>Loading...</h1>}>
+      <Suspense fallback={<p>Loading...</p>}>
         <Routes>
           <Route path="/" element={<HomeAsync />} />
           <Route path="/about" element={<AboutAsync />} />
           <Route path="/contact" element={<ContactUsAsync />} />
         </Routes>
       </Suspense>
-    </BrowserRouter>
+    </div>
   );
 };
 
