@@ -10,8 +10,8 @@ const App = () => {
   return (
     <div className={classNames("app", {}, [theme])}>
       <Navbar />
-
       <AppRouter />
+
       <button onClick={toggleTheme}>Toogle</button>
     </div>
   );
