@@ -2,8 +2,9 @@ import React from "react";
 import cls from "./ThemeSvitcher.module.scss";
 import { useTheme } from "app/providers/themeProviders";
 import { classNames } from "helpers/classNames/ClassNames";
-import moon from "../../../../../assets/icons/moon.jpg";
-import suun from "../../../../../assets/icons/suun.jpg";
+import Moon from "../../../../../assets/icons/theme-dark.svg";
+import Suun from "../../../../../assets/icons/theme-light.svg";
+
 import { Theme } from "app/providers/themeProviders/lib/ThemeContext";
 import Button, { ThemeButton } from "../../Button/Button";
 
@@ -20,13 +21,7 @@ const ThemeSwitcher = ({ className }: ThemeSvitcherProps) => {
       className={classNames(cls.ThemeSwitcher, {}, [className])}
       onClick={toggleTheme}
     >
-      <img
-        style={{
-          width: "40px",
-          borderRadius: "50%",
-        }}
-        src={theme == Theme.DARK ? suun : moon}
-      />
+      {theme == Theme.DARK ? <Moon /> : <Suun />}
     </Button>
   );
 };
