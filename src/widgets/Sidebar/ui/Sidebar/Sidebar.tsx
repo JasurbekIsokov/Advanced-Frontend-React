@@ -1,8 +1,9 @@
 import { classNames } from "helpers/classNames/ClassNames";
 import slc from "./Sidebar.module.scss";
 import { useState } from "react";
-import { ThemeSwitcher } from "shared/config/routeConfig/ui/ThemeSwitcher";
-import Button from "shared/config/routeConfig/ui/Button/Button";
+import { ThemeSwitcher } from "shared/ui/ThemeSwitcher";
+import Button from "shared/ui/Button/Button";
+import LangSwitcher from "shared/ui/langSwitcher/LangSwitcher";
 
 interface SidebarProps {
   className?: string;
@@ -25,6 +26,7 @@ const Sidebar = ({ className }: SidebarProps) => {
 
       <div className={slc.switcher}>
         <ThemeSwitcher />
+        <LangSwitcher className={classNames(slc.lang)} />
       </div>
     </div>
   );

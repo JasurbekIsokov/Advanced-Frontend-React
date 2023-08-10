@@ -3,7 +3,7 @@ import { classNames } from "helpers/classNames/ClassNames";
 import cls from "./navbar.module.scss";
 import AppLink, {
   ApplinkTheme,
-} from "shared/config/routeConfig/ui/AppLink/AppLink";
+} from "shared/ui/AppLink/AppLink";
 interface NavbarProps {
   className?: string;
 }
