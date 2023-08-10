@@ -1,31 +1,18 @@
-import { Routes, Route, Link } from "react-router-dom";
-
-import { Suspense } from "react";
-
 import { classNames } from "../helpers/classNames/ClassNames";
 
-import { Home } from "pages/home";
-import { About } from "pages/about";
-
 import useTheme from "./providers/themeProviders/lib/useTheme";
+import { AppRouter } from "./providers/router";
+import Navbar from "widgets/Navbar/ui/Navbar";
 
 const App = () => {
   const { theme, toggleTheme } = useTheme();
 
   return (
     <div className={classNames("app", {}, [theme])}>
-      <button onClick={toggleTheme}>Toogle</button>
-      <div>
-        <Link to="/">HOME</Link>|-------------|
-        <Link to="/about">ABOUT</Link>|-------------|
-      </div>
+      <Navbar />
 
-      <Suspense fallback={<p>Loading...</p>}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-        </Routes>
-      </Suspense>
+      <AppRouter />
+      <button onClick={toggleTheme}>Toogle</button>
     </div>
   );
 };
