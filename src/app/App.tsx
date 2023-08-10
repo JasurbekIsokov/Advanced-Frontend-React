@@ -8,6 +8,7 @@ import { Home } from "pages/home";
 import { About } from "pages/about";
 
 import useTheme from "./providers/themeProviders/lib/useTheme";
+import AppRouter from "./providers/router/ui/AppRouter";
 
 const App = () => {
   const { theme, toggleTheme } = useTheme();
@@ -20,12 +21,7 @@ const App = () => {
         <Link to="/about">ABOUT</Link>|-------------|
       </div>
 
-      <Suspense fallback={<p>Loading...</p>}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-        </Routes>
-      </Suspense>
+      <AppRouter />
     </div>
   );
 };
