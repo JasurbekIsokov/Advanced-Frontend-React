@@ -5,3 +5,7 @@ declare module "*.scss" {
   const classNames: IClassNames;
   export = classNames;
 }
+
+declare module "*.svg";
+declare module "*.jpeg";
+declare module "*.png";
