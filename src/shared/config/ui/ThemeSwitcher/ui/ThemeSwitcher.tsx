@@ -1,22 +1,28 @@
-import React from "react";
-import cls from "./ThemeSvitcher.module.scss";
-import { useTheme } from "app/providers/themeProviders";
 import { classNames } from "helpers/classNames/ClassNames";
+
+import cls from "./ThemeSwitcher.module.scss";
+import { useTheme } from "app/providers/themeProviders";
+import Button, { ThemeButton } from "../../Button/ui/Button";
+import { Theme } from "app/providers/themeProviders/lib/ThemeContext";
+
+import Moon from "../../../../assets/icons/theme-dark.svg";
+import Suun from "../../../../assets/icons/theme-light.svg";
 
 interface ThemeSvitcherProps {
   className?: string;
 }
 
 const ThemeSwitcher = ({ className }: ThemeSvitcherProps) => {
-  const { toggleTheme } = useTheme();
+  const { theme, toggleTheme } = useTheme();
 
   return (
-    <button
+    <Button
+      theme={ThemeButton.CLEAR}
       className={classNames(cls.ThemeSwitcher, {}, [className])}
       onClick={toggleTheme}
     >
-      Toogle
-    </button>
+      {theme == Theme.DARK ? <Moon /> : <Suun />}
+    </Button>
   );
 };
 

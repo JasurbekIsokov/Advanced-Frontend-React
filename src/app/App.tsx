@@ -1,19 +1,27 @@
 import { classNames } from "../helpers/classNames/ClassNames";
 
 import useTheme from "./providers/themeProviders/lib/useTheme";
-import { AppRouter } from "./providers/router";
-import Navbar from "widgets/Navbar/ui/Navbar";
+import AppRouter from "./providers/router/ui/AppRouter";
+import { Navbar } from "widgets/Navbar";
+
+import Sidebar from "widgets/Sidebar/ui/Sidebar/Sidebar";
+import { Suspense } from "react";
 
 const App = () => {
-  const { theme, toggleTheme } = useTheme();
+  const { theme } = useTheme();
 
   return (
-    <div className={classNames("app", {}, [theme])}>
-      <Navbar />
-      <AppRouter />
+    <Suspense fallback={<div>Loading...</div>}>
+      <div className={classNames("app", {}, [theme])}>
+        <Navbar />
 
-      <button onClick={toggleTheme}>Toogle</button>
-    </div>
+        <div className="content-page">
+          <Sidebar />
+
+          <AppRouter />
+        </div>
+      </div>
+    </Suspense>
   );
 };
 
