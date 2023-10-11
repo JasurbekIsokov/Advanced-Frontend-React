@@ -1,4 +1,7 @@
 {
   "language": "Uzbek",
-  "notFoundPage": "Page not found"
+  "notFoundPage": "Page not found",
+  "errorPage": "Something went wrong.",
+  "reloadPage": "Reload page",
+  "throwError": "Throw Error"
 }

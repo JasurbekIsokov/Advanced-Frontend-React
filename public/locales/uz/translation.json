@@ -1,4 +1,7 @@
 {
   "language": "English",
-  "notFoundPage": "Bunday sahifa topilmadi"
+  "notFoundPage": "Bunday sahifa topilmadi",
+  "errorPage": "Hatolik yuz berdi",
+  "reloadPage": "Sahifani yangilash",
+  "throwError": "Throw Error"
 }
