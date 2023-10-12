@@ -1,5 +1,8 @@
 {
+  "home": "Home",
+  "about": "About",
   "language": "Uzbek",
+  "shortLang": "Uz",
   "notFoundPage": "Page not found",
   "errorPage": "Something went wrong.",
   "reloadPage": "Reload page",

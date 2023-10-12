@@ -1,5 +1,8 @@
 {
+  "about": "Biz haqimizda",
+  "home": "Bosh oyna",
   "language": "English",
+  "shortLang": "En",
   "notFoundPage": "Bunday sahifa topilmadi",
   "errorPage": "Hatolik yuz berdi",
   "reloadPage": "Sahifani yangilash",

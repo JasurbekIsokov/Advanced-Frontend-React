@@ -1,4 +1,3 @@
-import BugButton from "app/providers/ErrorBoundary/ui/BugButton";
 import { useTranslation } from "react-i18next";
 
 const Home = () => {
@@ -6,7 +5,6 @@ const Home = () => {
 
   return (
     <>
-      <BugButton />
       <div>{t("home")}</div>
     </>
   );

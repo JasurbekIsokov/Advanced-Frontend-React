@@ -1,13 +1,14 @@
 import { classNames } from "helpers/classNames/ClassNames";
-import Button, { ThemeButton } from "../Button/ui/Button";
+import { Button, ThemeButton } from "../Button/ui/Button";
 import { useTranslation } from "react-i18next";
 import cls from "./LangSwitcher.module.scss";
 
 interface NavbarProps {
   className?: string;
+  short?: boolean;
 }
 
-const LangSwitcher = ({ className }: NavbarProps) => {
+const LangSwitcher = ({ className, short }: NavbarProps) => {
   const { t, i18n } = useTranslation();
 
   const toogle = () => {
@@ -20,7 +21,7 @@ const LangSwitcher = ({ className }: NavbarProps) => {
       className={classNames(cls.langSwitcher, {}, [className])}
       onClick={toogle}
     >
-      {t("language")}
+      {t(short ? "shortLang" : "language")}
     </Button>
   );
 };

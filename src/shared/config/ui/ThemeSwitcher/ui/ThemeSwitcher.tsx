@@ -2,7 +2,7 @@ import { classNames } from "helpers/classNames/ClassNames";
 
 import cls from "./ThemeSwitcher.module.scss";
 import { useTheme } from "app/providers/themeProviders";
-import Button, { ThemeButton } from "../../Button/ui/Button";
+import { Button, ThemeButton } from "../../Button/ui/Button";
 import { Theme } from "app/providers/themeProviders/lib/ThemeContext";
 
 import Moon from "../../../../assets/icons/theme-dark.svg";
