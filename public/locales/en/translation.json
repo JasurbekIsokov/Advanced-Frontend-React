@@ -6,5 +6,6 @@
   "notFoundPage": "Page not found",
   "errorPage": "Something went wrong.",
   "reloadPage": "Reload page",
-  "throwError": "Throw Error"
+  "throwError": "Throw Error",
+  "login": "Log In"
 }

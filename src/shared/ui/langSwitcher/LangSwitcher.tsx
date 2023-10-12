@@ -1,29 +1,26 @@
 import { classNames } from "helpers/classNames/ClassNames";
 import { useTranslation } from "react-i18next";
+import { Button, ButtonTheme } from "shared/ui/Button/Button";
 
-import cls from "./LangSwitcher.module.scss";
-import Button, { ThemeButton } from "../Button/Button";
-
-interface NavbarProps {
+interface LangSwitcherProps {
   className?: string;
+  short?: boolean;
 }
 
-const LangSwitcher = ({ className }: NavbarProps) => {
+export const LangSwitcher = ({ className, short }: LangSwitcherProps) => {
   const { t, i18n } = useTranslation();
 
-  const toogle = () => {
+  const toggle = async () => {
     i18n.changeLanguage(i18n.language === "uz" ? "en" : "uz");
   };
 
   return (
     <Button
-      theme={ThemeButton.CLEAR}
-      className={classNames(cls.langSwitcher, {}, [className])}
-      onClick={toogle}
+      className={classNames("", {}, [className])}
+      theme={ButtonTheme.BACKGROUND_INVERTED}
+      onClick={toggle}
     >
-      {t("language")}
+      {t(short ? "shortLang" : "language")}
     </Button>
   );
 };
-
-export default LangSwitcher;

@@ -1,30 +1,24 @@
-import { classNames } from "helpers/classNames/ClassNames";
 import { useState } from "react";
-
-import cls from "./Sidebar.module.scss";
-import {
-  Button,
-  ButtonSize,
-  ThemeButton,
-} from "shared/config/ui/Button/ui/Button";
-import { ThemeSwitcher } from "shared/config/ui/ThemeSwitcher";
-import LangSwitcher from "shared/config/ui/LangSwitcher/LangSwitcher";
-import { AppLink } from "shared/config/ui/Applink";
-import { AppLinkTheme } from "shared/config/ui/Applink/ui/AppLink";
-import { RoutePath } from "shared/config/routeConfig/routeConfig";
-import MainIcon from "shared/assets/icons/main-20-20.svg";
-import AboutIcon from "shared/assets/icons/about-20-20.svg";
+import { ThemeSwitcher } from "shared/ui/ThemeSwitcher";
+import { LangSwitcher } from "shared/ui/LangSwitcher/LangSwitcher";
+import { Button, ButtonSize, ButtonTheme } from "shared/ui/Button/Button";
 import { useTranslation } from "react-i18next";
+import { AppLink, AppLinkTheme } from "shared/ui/AppLink/AppLink";
+import { RoutePath } from "shared/config/routeConfig/routeConfig";
+import AboutIcon from "shared/assets/icons/about-20-20.svg";
+import MainIcon from "shared/assets/icons/main-20-20.svg";
+import cls from "./Sidebar.module.scss";
+import { classNames } from "helpers/classNames/ClassNames";
 
 interface SidebarProps {
   className?: string;
 }
 
-const Sidebar = ({ className }: SidebarProps) => {
+export const Sidebar = ({ className }: SidebarProps) => {
   const [collapsed, setCollapsed] = useState(false);
   const { t } = useTranslation();
 
-  const onToggleClick = () => {
+  const onToggle = () => {
     setCollapsed((prev) => !prev);
   };
 
@@ -37,9 +31,9 @@ const Sidebar = ({ className }: SidebarProps) => {
     >
       <Button
         data-testid="sidebar-toggle"
-        onClick={onToggleClick}
+        onClick={onToggle}
         className={cls.collapseBtn}
-        theme={ThemeButton.BACKGROUND_INVERTED}
+        theme={ButtonTheme.BACKGROUND_INVERTED}
         size={ButtonSize.L}
         square
       >
@@ -70,5 +64,3 @@ const Sidebar = ({ className }: SidebarProps) => {
     </div>
   );
 };
-
-export default Sidebar;

@@ -6,5 +6,6 @@
   "notFoundPage": "Bunday sahifa topilmadi",
   "errorPage": "Hatolik yuz berdi",
   "reloadPage": "Sahifani yangilash",
-  "throwError": "Throw Error"
+  "throwError": "Throw Error",
+  "login": "Kirish"
 }
