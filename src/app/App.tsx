@@ -4,6 +4,7 @@ import useTheme from "./providers/themeProviders/lib/useTheme";
 import AppRouter from "./providers/router/ui/AppRouter";
 import { Navbar } from "widgets/Navbar";
 import { Sidebar } from "widgets/Sidebar/ui";
+import { Counter } from "entities";
 
 const App = () => {
   const { theme } = useTheme();
@@ -15,6 +16,7 @@ const App = () => {
 
         <div className="content-page">
           <Sidebar />
+          <Counter />
           <AppRouter />
         </div>
       </Suspense>

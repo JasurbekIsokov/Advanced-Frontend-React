@@ -5,8 +5,10 @@
     }
   },
   "about": "about",
+  "decrement": "decrement",
   "errorPage": "errorPage",
   "home": "home",
+  "increment": "increment",
   "language": "language",
   "login": "login",
   "main": "main",
