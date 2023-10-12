@@ -5,6 +5,8 @@ import { BuildOptions } from "./types/config";
 import ReactRefreshPlugin from "@pmmmwh/react-refresh-webpack-plugin";
 import { BundleAnalyzerPlugin } from "webpack-bundle-analyzer";
 
+const StylelintPlugin = require("stylelint-webpack-plugin");
+
 export function buildPlugins({
   paths,
   isDev,
@@ -25,6 +27,12 @@ export function buildPlugins({
 
     new BundleAnalyzerPlugin({
       openAnalyzer: false,
+    }),
+
+    new StylelintPlugin({
+      // Stylelint konfiguratsiyasini topshirish
+      configFile: "./.stylelintrc.json",
+      files: "**/*.scss", // Qaysi fayllarni tekshirish kerakligini ko'rsating
     }),
   ];
 
