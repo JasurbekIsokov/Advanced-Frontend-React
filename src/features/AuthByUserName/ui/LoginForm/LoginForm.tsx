@@ -34,7 +34,7 @@ export const LoginForm = memo(({ className }: LoginFormProps) => {
   );
 
   const onLoginClick = useCallback(() => {
-    return dispatch(loginByUsername({ username, password }));
+    // return dispatch(loginByUsername({ username, password }));
   }, [dispatch, password, username]);
 
   return (
