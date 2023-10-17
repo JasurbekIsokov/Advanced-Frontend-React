@@ -9,7 +9,7 @@ import { Portal } from "shared/ui/Portal/Portal";
 
 import cls from "./Modal.module.scss";
 import { useTheme } from "app/providers/themeProviders";
-import { classNames } from "helpers/classNames/ClassNames";
+import { classNames } from "shared/lib/classNames/ClassNames";
 
 interface ModalProps {
   className?: string;

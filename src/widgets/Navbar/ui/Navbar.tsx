@@ -5,7 +5,7 @@ import { Button, ButtonTheme } from "shared/ui/Button/Button";
 
 import cls from "./Navbar.module.scss";
 import { LoginModal } from "features/AuthByUserName/ui/LoginModal/LoginModal";
-import { classNames } from "helpers/classNames/ClassNames";
+import { classNames } from "shared/lib/classNames/ClassNames";
 
 interface NavbarProps {
   className?: string;

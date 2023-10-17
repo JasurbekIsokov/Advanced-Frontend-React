@@ -8,7 +8,7 @@ import { RoutePath } from "shared/config/routeConfig/routeConfig";
 import AboutIcon from "shared/assets/icons/about-20-20.svg";
 import MainIcon from "shared/assets/icons/main-20-20.svg";
 import cls from "./Sidebar.module.scss";
-import { classNames } from "helpers/classNames/ClassNames";
+import { classNames } from "shared/lib/classNames/ClassNames";
 
 interface SidebarProps {
   className?: string;

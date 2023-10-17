@@ -4,7 +4,7 @@ import AppRouter from "./providers/router/ui/AppRouter";
 import { Navbar } from "widgets/Navbar";
 import { Sidebar } from "widgets/Sidebar/ui";
 import Loader from "shared/ui/Loader/Loader";
-import { classNames } from "helpers/classNames/ClassNames";
+import { classNames } from "shared/lib/classNames/ClassNames";
 import { useDispatch } from "react-redux";
 import { userActions } from "entities/user";
 
