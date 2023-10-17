@@ -1,4 +1,4 @@
-import { classNames } from "../helpers/classNames/ClassNames";
+import { classNames } from "../shared/lib/classNames/classNames";
 
 import useTheme from "./providers/themeProviders/lib/useTheme";
 import AppRouter from "./providers/router/ui/AppRouter";

@@ -1,4 +1,4 @@
-import { classNames } from "helpers/classNames/ClassNames";
+import { classNames } from "shared/lib/classNames/classNames";
 import { Link } from "react-router-dom";
 import cls from "./Navbar.module.scss";
 import { AppLink } from "shared/config/ui/Applink";

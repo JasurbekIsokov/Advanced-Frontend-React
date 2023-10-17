@@ -1,11 +1,11 @@
 import cls from "./ThemeSvitcher.module.scss";
 import { useTheme } from "app/providers/themeProviders";
-import { classNames } from "helpers/classNames/ClassNames";
 import Moon from "../../../assets/icons/theme-dark.svg";
 import Suun from "../../../assets/icons/theme-light.svg";
 
 import { Theme } from "app/providers/themeProviders/lib/ThemeContext";
 import Button, { ThemeButton } from "../../Button/Button";
+import { classNames } from "shared/lib/classNames/classNames";
 
 interface ThemeSvitcherProps {
   className?: string;

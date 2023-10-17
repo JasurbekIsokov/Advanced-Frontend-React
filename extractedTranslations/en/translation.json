@@ -1,6 +1,25 @@
 {
+  "Lorem ipsum dolor sit amet, consectetur adipisicing elit": {
+    " Aliquid commodi consequatur eligendi impedit incidunt necessitatibus possimus quis saepe sunt totam": {
+      "": ""
+    }
+  },
   "about": "about",
+  "decrement": "decrement",
+  "errorPage": "errorPage",
   "home": "home",
+  "increment": "increment",
   "language": "language",
-  "notFoundPage": "notFoundPage"
+  "login": "login",
+  "main": "main",
+  "notFoundPage": "notFoundPage",
+  "reloadPage": "reloadPage",
+  "throwError": "throwError",
+  "Введите username": "Введите username",
+  "Введите пароль": "Введите пароль",
+  "Войти": "Войти",
+  "Вы ввели неверный логин или пароль": "Вы ввели неверный логин или пароль",
+  "Главная": "Главная",
+  "О сайте": "О сайте",
+  "Форма авторизации": "Форма авторизации"
 }

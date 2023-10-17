@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { Link, LinkProps } from "react-router-dom";
 import cls from "./Applink.module.scss";
-import { classNames } from "helpers/classNames/ClassNames";
+import { classNames } from "shared/lib/classNames/classNames";
 
 export enum AppLinkTheme {
   PRIMARY = "primary",

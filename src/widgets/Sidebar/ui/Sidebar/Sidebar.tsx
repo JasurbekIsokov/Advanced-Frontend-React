@@ -1,4 +1,4 @@
-import { classNames } from "helpers/classNames/ClassNames";
+import { classNames } from "shared/lib/classNames/classNames";
 import { useState } from "react";
 
 import cls from "./Sidebar.module.scss";
