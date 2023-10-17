@@ -14,7 +14,7 @@ export default {
   coveragePathIgnorePatterns: ["\\\\node_modules\\\\"],
   moduleFileExtensions: ["js", "jsx", "ts", "tsx", "json", "node"],
   moduleDirectories: ["node_modules"],
-  modulePaths: ["<rootDir>src"],
+  modulePaths: ["<rootDir>/src"],
   testMatch: [
     // Обнаружил разницу между МАК ОС и ВИНДОУС!!!
     "<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)",
