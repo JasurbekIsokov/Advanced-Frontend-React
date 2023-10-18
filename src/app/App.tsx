@@ -1,5 +1,5 @@
 import { Suspense, useEffect } from "react";
-import useTheme from "./providers/themeProviders/lib/useTheme";
+
 import AppRouter from "./providers/router/ui/AppRouter";
 import { Navbar } from "widgets/Navbar";
 import { Sidebar } from "widgets/Sidebar/ui";
@@ -7,6 +7,7 @@ import Loader from "shared/ui/Loader/Loader";
 import { classNames } from "shared/lib/classNames/ClassNames";
 import { useDispatch } from "react-redux";
 import { userActions } from "entities/user";
+import { useTheme } from "./providers/ThemeProvider";
 
 const App = () => {
   const { theme } = useTheme();
