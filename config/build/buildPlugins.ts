@@ -5,8 +5,6 @@ import { BuildOptions } from "./types/config";
 import ReactRefreshPlugin from "@pmmmwh/react-refresh-webpack-plugin";
 import { BundleAnalyzerPlugin } from "webpack-bundle-analyzer";
 
-const StylelintPlugin = require("stylelint-webpack-plugin");
-
 export function buildPlugins({
   paths,
   isDev,
@@ -20,25 +18,18 @@ export function buildPlugins({
       filename: "css/[name].[contenthash:8].css",
       chunkFilename: "css/[name].[contenthash:8].css",
     }),
-
     new webpack.DefinePlugin({
       __IS_DEV__: JSON.stringify(isDev),
-    }),
-
-    new BundleAnalyzerPlugin({
-      openAnalyzer: false,
-    }),
-
-    new StylelintPlugin({
-      // Stylelint konfiguratsiyasini topshirish
-      configFile: "./.stylelintrc.json",
-      files: "**/*.scss", // Qaysi fayllarni tekshirish kerakligini ko'rsating
     }),
   ];
 
   if (isDev) {
     plugins.push(new webpack.HotModuleReplacementPlugin());
-    plugins.push(new ReactRefreshPlugin());
+    plugins.push(
+      new BundleAnalyzerPlugin({
+        openAnalyzer: false,
+      })
+    );
   }
 
   return plugins;

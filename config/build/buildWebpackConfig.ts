@@ -29,6 +29,4 @@ export function buildWebpackConfig(
     devtool: isDev ? "inline-source-map" : undefined,
     devServer: isDev ? builDevServer(options) : undefined,
   };
-
-  
 }

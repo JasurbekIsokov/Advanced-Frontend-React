@@ -1,7 +1,7 @@
 import React from "react";
 import { Theme, useTheme } from "app/providers/ThemeProvider";
-import LightIcon from "./../../../../shared/assets/icons/theme-light.svg";
-import DarkIcon from "./../../../../shared/assets/icons/theme-dark.svg";
+import LightIcon from "shared/assets/icons/theme-light.svg";
+import DarkIcon from "shared/assets/icons/theme-dark.svg";
 import { Button, ButtonTheme } from "shared/ui/Button/Button";
 import { classNames } from "shared/lib/classNames/ClassNames";
 
@@ -18,8 +18,7 @@ export const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
       className={classNames("", {}, [className])}
       onClick={toggleTheme}
     >
-      {/* {theme === Theme.DARK ? <DarkIcon /> : <LightIcon />} */}
-      {theme === Theme.DARK ? <h1>Dark</h1> : <h1>Light</h1>}
+      {theme === Theme.DARK ? <DarkIcon /> : <LightIcon />}
     </Button>
   );
 };
