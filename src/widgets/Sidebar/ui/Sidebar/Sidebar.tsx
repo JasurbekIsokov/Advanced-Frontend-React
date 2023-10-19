@@ -1,3 +1,4 @@
+import { classNames } from "shared/lib/classNames/classNames";
 import { useState } from "react";
 import { ThemeSwitcher } from "shared/ui/ThemeSwitcher";
 import { LangSwitcher } from "shared/ui/LangSwitcher/LangSwitcher";
@@ -8,7 +9,6 @@ import { RoutePath } from "shared/config/routeConfig/routeConfig";
 import AboutIcon from "shared/assets/icons/about-20-20.svg";
 import MainIcon from "shared/assets/icons/main-20-20.svg";
 import cls from "./Sidebar.module.scss";
-import { classNames } from "shared/lib/classNames/ClassNames";
 
 interface SidebarProps {
   className?: string;
@@ -42,7 +42,7 @@ export const Sidebar = ({ className }: SidebarProps) => {
       <div className={cls.items}>
         <AppLink
           theme={AppLinkTheme.SECONDARY}
-          to={RoutePath.home}
+          to={RoutePath.main}
           className={cls.item}
         >
           <MainIcon className={cls.icon} />

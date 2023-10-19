@@ -1,14 +1,11 @@
+import { classNames } from "shared/lib/classNames/classNames";
 import { useTranslation } from "react-i18next";
 import React, { useCallback, useState } from "react";
 import { Button, ButtonTheme } from "shared/ui/Button/Button";
-
+import { LoginModal } from "features/AuthByUsername";
 import { useDispatch, useSelector } from "react-redux";
-
+import { getUserAuthData, userActions } from "entities/User";
 import cls from "./Navbar.module.scss";
-import { getUserAuthData } from "entities/user/model/selectors/getUserAuthData/getUserAuthData";
-import { userActions } from "entities/user/model/slice/userSlice";
-import { classNames } from "shared/lib/classNames/ClassNames";
-import { LoginModal } from "features/AuthByUserName/ui/LoginModal/LoginModal";
 
 interface NavbarProps {
   className?: string;
@@ -55,7 +52,9 @@ export const Navbar = ({ className }: NavbarProps) => {
       >
         {t("Войти")}
       </Button>
-      <LoginModal isOpen={isAuthModal} onClose={onCloseModal} />
+      {isAuthModal && (
+        <LoginModal isOpen={isAuthModal} onClose={onCloseModal} />
+      )}
     </div>
   );
 };
