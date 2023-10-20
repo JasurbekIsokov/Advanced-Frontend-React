@@ -4,6 +4,8 @@ import { ThemeDecorator } from "shared/config/storybook/ThemeDecorator/ThemeDeco
 import { Theme } from "app/providers/ThemeProvider";
 import AboutPage from "./AboutPage";
 
+interface AboutPageProps {}
+
 export default {
   title: "pages/AboutPage",
   component: AboutPage,
@@ -12,7 +14,7 @@ export default {
   },
 } as ComponentMeta<typeof AboutPage>;
 
-const Template: ComponentStory<typeof AboutPage> = (args) => (
+const Template: ComponentStory<typeof AboutPage> = (args: AboutPageProps) => (
   <AboutPage {...args} />
 );
 

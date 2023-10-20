@@ -12,7 +12,9 @@ export default {
   },
 } as ComponentMeta<typeof MainPage>;
 
-const Template: ComponentStory<typeof MainPage> = (args) => (
+interface MainPage {}
+
+const Template: ComponentStory<typeof MainPage> = (args: MainPage) => (
   <MainPage {...args} />
 );
 
