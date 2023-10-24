@@ -1,14 +1,13 @@
-import { configureStore, ReducersMapObject } from "@reduxjs/toolkit";
-import { counterReducer } from "entities/Counter";
-import { userReducer } from "entities/User";
-import { $api } from "shared/api/api";
-import { To } from "history";
-import { NavigateOptions } from "react-router";
-import { CombinedState, Reducer } from "redux";
-import { StateSchema, ThunkExtraArg } from "./StateSchema";
-import { createReducerManager } from "./reducerManager";
-
-export function createReduxStore(
+import { configureStore, type ReducersMapObject } from '@reduxjs/toolkit';
+import { counterReducer } from 'myEntities/Counter';
+import { userReducer } from 'myEntities/User';
+import { $api } from 'shared/api/api';
+import { type NavigateOptions } from 'react-router';
+import { type CombinedState, type Reducer } from 'redux';
+import { type StateSchema, type ThunkExtraArg } from './StateSchema';
+import { To } from 'react-router-dom';
+import {createReducerManager} from './ReducerManager'
+export function createReduxStore (
   initialState?: StateSchema,
   asyncReducers?: ReducersMapObject<StateSchema>,
   navigate?: (to: To, options?: NavigateOptions) => void
@@ -16,32 +15,31 @@ export function createReduxStore(
   const rootReducers: ReducersMapObject<StateSchema> = {
     ...asyncReducers,
     counter: counterReducer,
-    user: userReducer,
+    user: userReducer
   };
 
   const reducerManager = createReducerManager(rootReducers);
 
   const extraArg: ThunkExtraArg = {
     api: $api,
-    navigate,
+    navigate
   };
 
   const store = configureStore({
     reducer: reducerManager.reduce as Reducer<CombinedState<StateSchema>>,
     devTools: __IS_DEV__,
     preloadedState: initialState,
-    middleware: (getDefaultMiddleware) =>
-      getDefaultMiddleware({
-        thunk: {
-          extraArgument: extraArg,
-        },
-      }),
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware({
+      thunk: {
+        extraArgument: extraArg
+      }
+    })
   });
 
-  // @ts-ignore
+  // @ts-expect-error
   store.reducerManager = reducerManager;
 
   return store;
 }
 
-export type AppDispatch = ReturnType<typeof createReduxStore>["dispatch"];
+export type AppDispatch = ReturnType<typeof createReduxStore>['dispatch'];

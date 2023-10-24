@@ -1,6 +1,4 @@
-/build
 node_modules
-.idea
-/storybook-static
-.loki/report.html
-.loki/report.json
+storybook-static
+.eslintrc.js
+.loki

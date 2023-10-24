@@ -1,10 +1,12 @@
-import { lazy } from "react";
+import { lazy } from 'react';
 
 export const ProfilePageAsync = lazy(
-  () =>
-    new Promise((resolve) => {
-      // @ts-ignore
+  async () =>
+    await new Promise((resolve) => {
       // ТАК В РЕАЛЬНЫХ ПРОЕКТАХ НЕ ДЕЛАТЬ!!!!! ДЕЛАЕМ ДЛЯ КУРСА!
-      setTimeout(() => resolve(import("./ProfilePage")), 1500);
+      setTimeout(() => {
+        // @ts-expect-error
+        resolve(import('./ProfilePage'));
+      }, 1500);
     })
 );

@@ -1,4 +1,5 @@
-import webpack, { DefinePlugin, RuleSetRule } from "webpack";
+import * as webpack from "webpack";
+import { DefinePlugin, RuleSetRule } from "webpack";
 import path from "path";
 import { buildCssLoader } from "../build/loaders/buildCssLoader";
 import { BuildPaths } from "../build/types/config";
@@ -33,6 +34,7 @@ export default ({ config }: { config: webpack.Configuration }) => {
     new DefinePlugin({
       __IS_DEV__: JSON.stringify(true),
       __API__: JSON.stringify(""),
+      __PROJECT__: JSON.stringify("storybook"),
     })
   );
 
