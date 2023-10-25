@@ -3,11 +3,10 @@ import { useTranslation } from 'react-i18next';
 import { Mods, classNames } from 'shared/lib/classNames/classNames';
 import { Text, TextAlign, TextTheme } from 'shared/ui/Text/Text';
 import { Profile } from 'entities/Profile/model/types/profile';
-import { Country, Currency } from 'shared/const/common';
-import { CurrencySelect } from 'entities/Currency';
+import { Currency, CurrencySelect } from 'entities/Currency';
 import { Loader } from 'shared/ui/Loader/Loader';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
-import { CountrySelect } from 'entities/Country';
+import { Country, CountrySelect } from 'entities/Country';
 import { Input } from 'shared/ui/Input/Input';
 import cls from './ProfileCard.module.scss';
 
