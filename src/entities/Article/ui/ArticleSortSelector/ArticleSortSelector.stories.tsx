@@ -10,7 +10,7 @@ export default {
         backgroundColor: { control: 'color' },
     },
 } as ComponentMeta<typeof ArticleSortSelector>;
-// eslint-disable-next-line react/jsx-props-no-spreading
+
 const Template: ComponentStory<typeof ArticleSortSelector> = (args) => <ArticleSortSelector {...args} />;
 
 export const Normal = Template.bind({});

@@ -10,7 +10,7 @@ export default {
         backgroundColor: { control: 'color' },
     },
 } as ComponentMeta<typeof ArticleTypeTabs>;
-// eslint-disable-next-line react/jsx-props-no-spreading
+
 const Template: ComponentStory<typeof ArticleTypeTabs> = (args) => <ArticleTypeTabs {...args} />;
 
 export const Normal = Template.bind({});

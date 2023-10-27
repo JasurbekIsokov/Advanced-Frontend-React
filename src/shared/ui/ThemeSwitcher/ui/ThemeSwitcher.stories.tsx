@@ -11,7 +11,7 @@ export default {
         backgroundColor: { control: 'color' },
     },
 } as ComponentMeta<typeof ThemeSwitcher>;
-// eslint-disable-next-line react/jsx-props-no-spreading
+
 const Template: ComponentStory<typeof ThemeSwitcher> = (args) => <ThemeSwitcher {...args} />;
 
 export const Normal = Template.bind({});
