@@ -3,7 +3,6 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { Page } from 'widgets/Page/Page';
 import { useParams } from 'react-router-dom';
-import React from 'react';
 import cls from './ArticleEditPage.module.scss';
 
 interface ArticleEditPageProps {
