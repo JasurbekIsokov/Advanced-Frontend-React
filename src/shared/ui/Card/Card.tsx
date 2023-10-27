@@ -13,6 +13,7 @@ export const Card = memo((props: CardProps) => {
     return (
         <div
             className={classNames(cls.Card, {}, [className])}
+            // eslint-disable-next-line react/jsx-props-no-spreading
             {...otherProps}
         >
             {children}
