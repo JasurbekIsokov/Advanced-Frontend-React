@@ -13,7 +13,6 @@ export default {
         backgroundColor: { control: 'color' },
     },
 } as ComponentMeta<typeof ArticleDetailsPage>;
-
 // eslint-disable-next-line react/jsx-props-no-spreading
 const Template: ComponentStory<typeof ArticleDetailsPage> = (args) => <ArticleDetailsPage {...args} />;
 

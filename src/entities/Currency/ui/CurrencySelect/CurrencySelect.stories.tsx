@@ -9,7 +9,6 @@ export default {
         backgroundColor: { control: 'color' },
     },
 } as ComponentMeta<typeof CurrencySelect>;
-
 // eslint-disable-next-line react/jsx-props-no-spreading
 const Template: ComponentStory<typeof CurrencySelect> = (args) => <CurrencySelect {...args} />;
 

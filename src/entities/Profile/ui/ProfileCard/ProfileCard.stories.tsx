@@ -12,7 +12,6 @@ export default {
         backgroundColor: { control: 'color' },
     },
 } as ComponentMeta<typeof ProfileCard>;
-
 // eslint-disable-next-line react/jsx-props-no-spreading
 const Template: ComponentStory<typeof ProfileCard> = (args) => <ProfileCard {...args} />;
 

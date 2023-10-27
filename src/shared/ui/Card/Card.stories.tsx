@@ -11,7 +11,6 @@ export default {
         backgroundColor: { control: 'color' },
     },
 } as ComponentMeta<typeof Card>;
-
 // eslint-disable-next-line react/jsx-props-no-spreading
 const Template: ComponentStory<typeof Card> = (args) => <Card {...args} />;
 

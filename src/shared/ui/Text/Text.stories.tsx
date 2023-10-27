@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { Text, TextTheme } from 'shared/ui/Text/Text';
+import { Text, TextSize, TextTheme } from 'shared/ui/Text/Text';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
 
@@ -11,7 +11,6 @@ export default {
         backgroundColor: { control: 'color' },
     },
 } as ComponentMeta<typeof Text>;
-
 // eslint-disable-next-line react/jsx-props-no-spreading
 const Template: ComponentStory<typeof Text> = (args) => <Text {...args} />;
 
@@ -56,3 +55,10 @@ onlyTextDark.args = {
     text: 'Description Description Description Description',
 };
 onlyTextDark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const SizeL = Template.bind({});
+SizeL.args = {
+    title: 'Title lorem ipsun',
+    text: 'Description Description Description Description',
+    size: TextSize.L,
+};

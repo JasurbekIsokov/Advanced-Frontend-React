@@ -10,8 +10,6 @@ const MainPage = () => {
         setValue(val);
     };
 
-    // style={{color:"red"}}
-
     return (
         <div>
             {t('Главная страница')}

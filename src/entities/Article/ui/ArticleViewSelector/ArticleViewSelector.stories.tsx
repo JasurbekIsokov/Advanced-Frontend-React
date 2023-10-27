@@ -4,13 +4,12 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ArticleViewSelector } from './ArticleViewSelector';
 
 export default {
-    title: 'shared/ArticleViewSelector',
+    title: 'entities/Article/ArticleViewSelector',
     component: ArticleViewSelector,
     argTypes: {
         backgroundColor: { control: 'color' },
     },
 } as ComponentMeta<typeof ArticleViewSelector>;
-
 // eslint-disable-next-line react/jsx-props-no-spreading
 const Template: ComponentStory<typeof ArticleViewSelector> = (args) => <ArticleViewSelector {...args} />;
 

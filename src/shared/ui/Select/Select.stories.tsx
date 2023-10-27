@@ -9,7 +9,6 @@ export default {
         backgroundColor: { control: 'color' },
     },
 } as ComponentMeta<typeof Select>;
-
 // eslint-disable-next-line react/jsx-props-no-spreading
 const Template: ComponentStory<typeof Select> = (args) => <Select {...args} />;
 
