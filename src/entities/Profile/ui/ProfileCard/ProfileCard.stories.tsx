@@ -38,8 +38,8 @@ export const PrimaryRedesigned = Template.bind({});
 PrimaryRedesigned.args = primaryArgs;
 PrimaryRedesigned.decorators = [NewDesignDecorator];
 
-export const withError = Template.bind({});
-withError.args = {
+export const WithError = Template.bind({});
+WithError.args = {
     error: 'true',
 };
 

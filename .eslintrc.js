@@ -28,6 +28,8 @@ module.exports = {
         'unused-imports',
     ],
     rules: {
+        'no-console': 'off',
+        'react/jsx-props-no-spreading': 'off',
         'unused-imports/no-unused-imports': 'error',
         'react/jsx-filename-extension': [
             2,
@@ -40,7 +42,6 @@ module.exports = {
         'no-unused-vars': 'off',
         'react/require-default-props': 'off',
         'react/react-in-jsx-scope': 'off',
-        'react/jsx-props-no-spreading': 'warn',
         'react/function-component-definition': 'off',
         'no-shadow': 'off',
         'import/extensions': 'off',
