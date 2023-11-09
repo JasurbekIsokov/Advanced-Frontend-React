@@ -17,7 +17,11 @@ export const createArticle = (article?: Article) => {
     return cy
         .request({
             method: 'POST',
-            url: 'http://localhost:8000/articles',
+            // ---------- Local server ----------
+            // url: 'http://localhost:8000/articles',
+             
+            // ---------- Real server ----------
+            url: 'https://advanced-frontend-server-m2ul.vercel.app/articles',
             headers: { Authorization: 'asasf' },
             body: article ?? defaultArticle,
         })
@@ -27,7 +31,11 @@ export const createArticle = (article?: Article) => {
 export const removeArticle = (articleId: string) => {
     return cy.request({
         method: 'DELETE',
-        url: `http://localhost:8000/articles/${articleId}`,
+        // ---------- Local server ----------
+        // url: `http://localhost:8000/articles/${articleId}`,
+
+        // ---------- Real server ----------
+        url: `https://advanced-frontend-server-m2ul.vercel.app/${articleId}`,
         headers: { Authorization: 'asasf' },
     });
 };

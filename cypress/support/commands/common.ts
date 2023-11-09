@@ -9,7 +9,11 @@ export const login = (
     return cy
         .request({
             method: 'POST',
-            url: 'http://localhost:8000/login',
+            // ---------- Local server ----------
+            // url: 'http://localhost:8000/login',
+            
+            // ---------- Real server ----------
+            url: 'https://advanced-frontend-server-m2ul.vercel.app/login',
             body: {
                 username,
                 password,

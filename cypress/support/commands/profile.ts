@@ -8,7 +8,11 @@ export const updateProfile = (firstname: string, lastname: string) => {
 export const resetProfile = (profileId: string) => {
     return cy.request({
         method: 'PUT',
-        url: `http://localhost:8000/profile/${profileId}`,
+        // ---------- Local server ----------
+        // url: `http://localhost:8000/profile/${profileId}`,
+        
+        // ---------- Real server ----------
+        url: `https://advanced-frontend-server-m2ul.vercel.app/${profileId}`,
         headers: { Authorization: 'asasf' },
         body: {
             id: '4',

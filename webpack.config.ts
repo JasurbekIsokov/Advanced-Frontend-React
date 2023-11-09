@@ -11,7 +11,11 @@ function getApiUrl(mode: BuildMode, apiUrl?: string) {
         return '/api';
     }
 
-    return 'http://localhost:8000';
+    // ---------- Local server ----------
+    // return 'http://localhost:8000';
+        
+    // ---------- Real server ----------
+    return 'https://advanced-frontend-server-m2ul.vercel.app';
 }
 
 export default (env: BuildEnv) => {

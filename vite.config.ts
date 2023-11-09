@@ -9,7 +9,11 @@ export default defineConfig({
     },
     define: {
         __IS_DEV__: JSON.stringify(true),
-        __API__: JSON.stringify('http://localhost:8000'),
+        // ---------- Local server ----------
+        // __API__: JSON.stringify('http://localhost:8000'),
+
+        // ---------- Real server ----------
+        __API__: JSON.stringify('https://advanced-frontend-server-m2ul.vercel.app'),
         __PROJECT__: JSON.stringify('frontend'),
     },
 });
