@@ -36,7 +36,7 @@
   "articles": [
     {
       "id": "1",
-      "title": "Javascript news СВЕЖАЯ",
+      "title": "Javascript news FRESH",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1024px-Unofficial_JavaScript_logo_2.svg.png",
       "views": 1022,
@@ -567,7 +567,7 @@
     {
       "title": "TESTING ARTICLE",
       "subtitle": "БиологиЯ",
-      "img": "https://avatars.mds.yandex.net/get-zen_doc/2746556/pub_5f50dd7e1a1ddf4776aa5569_5f50decd2506f211d1de6284/scale_1200",
+      "img": "https://cdn-acgla.nitrocdn.com/bvIhcJyiWKFqlMsfAAXRLitDZjWdRlLX/assets/static/optimized/rev-5131b73/wp-content/uploads/2021/01/Natural-science.jpg",
       "views": 1022,
       "createdAt": "26.02.2022",
       "userId": "1",
@@ -587,7 +587,7 @@
     },
     {
       "id": "2",
-      "text": "some comment 2",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate dolores dolorum eaque eius excepturi expedita     ipsa nam, quos rem rerum voluptas voluptate voluptatem? Dicta distinctio dolore explicabo labore magni sit!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate dolores dolorum eaque eius excepturi expedita     ipsa nam, quos rem rerum voluptas voluptate voluptatem? Dicta distinctio dolore explicabo labore magni sit!",
       "articleId": "1",
       "userId": "1"
     },
@@ -791,7 +791,7 @@
         "isCounterEnabled": true,
         "isAppRedesigned": true
       },
-      "avatar": "https://mobimg.b-cdn.net/v3/fetch/22/2207633df03a819cd72889249c8361a8.jpeg?w=1470&r=0.5625",
+      "avatar": "https://st4.depositphotos.com/1252160/39515/i/450/depositphotos_395154950-stock-photo-hooded-unknown-programmer-dark-face.jpg",
       "jsonSettings": {
         "isArticlesPageWasOpened": true,
         "theme": "app_dark_theme"
@@ -848,24 +848,24 @@
   "profile": [
     {
       "id": "1",
-      "first": "фыаыфаыф",
-      "lastname": "ulbi",
-      "age": 25,
-      "currency": "EUR",
-      "country": "Ukraine",
-      "city": "Moscow",
-      "username": "admin213",
-      "avatar": "https://mobimg.b-cdn.net/v3/fetch/22/2207633df03a819cd72889249c8361a8.jpeg?w=1470&r=0.5625"
+      "first": "Jasurbek",
+      "lastname": "Isokov",
+      "age": 21,
+      "currency": "SUM",
+      "country": "Uzbekistan",
+      "city": "Tashkent",
+      "username": "JIDEV",
+      "avatar": "https://st4.depositphotos.com/1252160/39515/i/450/depositphotos_395154950-stock-photo-hooded-unknown-programmer-dark-face.jpg"
     },
     {
       "id": "2",
-      "first": "ulbi tv",
-      "lastname": "asf",
-      "age": 465,
-      "currency": "EUR",
-      "country": "Ukraine",
-      "city": "Moscow",
-      "username": "ulbi tv",
+      "first": "Ulugbek",
+      "lastname": "Isokov",
+      "age": 421,
+      "currency": "Sum",
+      "country": "Uzbekistan",
+      "city": "Tashkent",
+      "username": "UIDEV",
       "avatar": "https://i.pinimg.com/originals/9a/e0/2d/9ae02d4b4288396108ef77830a59e060.jpg"
     },
     {
@@ -874,8 +874,8 @@
       "lastname": "user",
       "age": 465,
       "currency": "EUR",
-      "country": "Ukraine",
-      "city": "Moscow",
+      "country": "Uzbekistan",
+      "city": "Tashkent",
       "username": "testuser",
       "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
     }

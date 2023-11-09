@@ -17,5 +17,10 @@
     "Имя и фамилия обязательны": "Ism va familiya shart",
     "Данные не указаны": "Ma'lumotlar ko'rsatilmagan",
     "Некорректный возраст": "Noto'g'ri yosh",
-    "Профиль не найден": "Profil topilmadi"
+    "Профиль не найден": "Profil topilmadi",
+    "Cсылка на аватар": "Rasm havolasi",
+    "Возраст": "Yosh",
+    "Имя": "Ism",
+    "Фамилия": "Familiya"
+    
 }
