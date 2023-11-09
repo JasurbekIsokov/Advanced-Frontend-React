@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Button } from '@/shared/ui/deprecated/Button';
 
 // Компонент для тестирования ErrorBoundary
+// ErrorBundary-ni sinab ko'rish uchun komponent
 export const BugButton = () => {
     const [error, setError] = useState(false);
     const { t } = useTranslation();

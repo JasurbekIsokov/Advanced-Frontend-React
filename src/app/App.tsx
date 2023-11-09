@@ -1,18 +1,18 @@
 import React, { memo, Suspense, useEffect } from 'react';
 import { useSelector } from 'react-redux';
-import { classNames } from '@/shared/lib/classNames/classNames';
-import { getUserInited, initAuthData } from '@/entities/User';
-import { AppRouter } from './providers/router';
 import { Navbar } from '@/widgets/Navbar';
 import { Sidebar } from '@/widgets/Sidebar';
-import { useTheme } from '@/shared/lib/hooks/useTheme/useTheme';
-import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { ToggleFeatures } from '@/shared/lib/features';
-import { MainLayout } from '@/shared/layouts/MainLayout';
-import { AppLoaderLayout } from '@/shared/layouts/AppLoaderLayout';
+import { AppRouter } from './providers/router';
 import { PageLoader } from '@/widgets/PageLoader';
 import { useAppToolbar } from './lib/useAppToolbar';
+import { ToggleFeatures } from '@/shared/lib/features';
+import { MainLayout } from '@/shared/layouts/MainLayout';
+import { getUserInited, initAuthData } from '@/entities/User';
+import { useTheme } from '@/shared/lib/hooks/useTheme/useTheme';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import { withTheme } from './providers/ThemeProvider/ui/withTheme';
+import { AppLoaderLayout } from '@/shared/layouts/AppLoaderLayout';
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 
 const App = memo(() => {
     const { theme } = useTheme();
